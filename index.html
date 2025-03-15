@@ -11,23 +11,31 @@
             text-align: center;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 900px;
         }
 
         .text-section {
-            width: 40%;
-            text-align: left;
+            flex: 1;
+            min-width: 250px;
             padding: 20px;
+            text-align: left;
         }
 
         .text-section h1 {
-            font-size: 40px;
+            font-size: 36px;
             font-weight: bold;
         }
 
@@ -42,6 +50,7 @@
             border-radius: 15px;
             box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
             text-align: center;
+            margin-top: 20px;
         }
 
         .message-display {
@@ -69,6 +78,26 @@
         .button:hover {
             background-color: #ff1493;
         }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .text-section {
+                text-align: center;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #333;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -87,6 +116,8 @@
         </div>
     </div>
 
+    <p class="footer">@Created by your Crush!!</p>
+
     <script>
         const messages = [
             "Inang yan HAHAHHA.",
@@ -94,27 +125,26 @@
             "Every moment with you is a beautiful memory in the making.",
             "Gawan mo nga din ako nyan teh HAHAHHA tas yung bayad kiss nalng salamat.",
             "Yung kayat samin is yot HAHHAHAHHAA.",
-  "Taena.",
-  "Kaya mo yan laban lng HAHAHA.",
-  "Taena ayoko mag college.",
-  "Kaya muna yan.",
-"Kulera.",
-"Kung bobo ka sa math mas bobo ako sa math HAHAHAH.",
-"Oa.",
- "Taena mo HAHAHAHHAHAHAAHAH.",
-"Yawa.",
-"Mataba bako jan te?\nBe honest ha\n Baka mapatay kita hahaha .",
-
-"Ina nito ahha.",
-"Yan lu² pa.",
-"Anyare na naman.",
-"Pag ako bumagsak tas pinagalitan ni mama sasabihin ko tlaga na ikaw nag turo sakin HAHHAHAH.",
-"Di wala late reply..",
-"So nakaka disturbo nako ngayun?.",
-"May nanligaw na naman\n tas may jowa pa.",
-"Baliw ampt HAHAHA.",
-"Sure oi.",
-"Gusto kita jimar matagal na.",
+            "Taena.",
+            "Kaya mo yan laban lng HAHAHA.",
+            "Taena ayoko mag college.",
+            "Kaya muna yan.",
+            "Kulera.",
+            "Kung bobo ka sa math mas bobo ako sa math HAHAHAH.",
+            "Oa.",
+            "Taena mo HAHAHAHHAHAHAAHAH.",
+            "Yawa.",
+            "Mataba bako jan te?\nBe honest ha\n Baka mapatay kita hahaha .",
+            "Ina nito ahha.",
+            "Yan lu² pa.",
+            "Anyare na naman.",
+            "Pag ako bumagsak tas pinagalitan ni mama sasabihin ko tlaga na ikaw nag turo sakin HAHHAHAH.",
+            "Di wala late reply..",
+            "So nakaka disturbo nako ngayun?.",
+            "May nanligaw na naman\n tas may jowa pa.",
+            "Baliw ampt HAHAHA.",
+            "Sure oi.",
+            "Gusto kita jimar matagal na.",
             "Ganda ko daw eh\n HAHAHHA."
         ];
 
@@ -123,7 +153,6 @@
             document.getElementById("message").innerText = messages[randomIndex];
         }
     </script>
-    <p><center>@Created by your Crush!!</center></p>
 
 </body>
 </html>
