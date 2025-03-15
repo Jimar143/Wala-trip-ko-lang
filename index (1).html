@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Message Generator</title>
+    <style>
+        body {
+            background-color: #ffb6c1;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .text-section {
+            width: 40%;
+            text-align: left;
+            padding: 20px;
+        }
+
+        .text-section h1 {
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .text-section p {
+            font-size: 18px;
+        }
+
+        .message-box {
+            background-color: #ffcc66;
+            width: 300px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .message-display {
+            background-color: #d3f4ff;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 18px;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff69b4;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="text-section">
+            <h1>Messages mo <br> Generator</h1>
+            <p>Generate random message na sinend mo sakin!!</p>
+        </div>
+
+        <div class="message-box">
+            <div class="message-display" id="message">
+                Click the button to get a random message!
+            </div>
+            <button class="button" onclick="generateMessage()">Generate Message</button>
+        </div>
+    </div>
+
+    <script>
+        const messages = [
+            "Inang yan HAHAHHA.",
+            "Pustahan tayo makakalimutan mo yan.",
+            "Every moment with you is a beautiful memory in the making.",
+            "Gawan mo nga din ako nyan teh HAHAHHA tas yung bayad kiss nalng salamat.",
+            "Yung kayat samin is yot HAHHAHAHHAA.",
+  "Taena.",
+  "Kaya mo yan laban lng HAHAHA.",
+  "Taena ayoko mag college.",
+  "Kaya muna yan.",
+"Kulera.",
+"Kung bobo ka sa math mas bobo ako sa math HAHAHAH.",
+"Oa.",
+ "Taena mo HAHAHAHHAHAHAAHAH.",
+"Yawa.",
+"Mataba bako jan te?\nBe honest ha\n Baka mapatay kita hahaha .",
+
+"Ina nito ahha.",
+"Yan lu² pa.",
+"Anyare na naman.",
+"Pag ako bumagsak tas pinagalitan ni mama sasabihin ko tlaga na ikaw nag turo sakin HAHHAHAH.",
+"Di wala late reply..",
+"So nakaka disturbo nako ngayun?.",
+"May nanligaw na naman\n tas may jowa pa.",
+"Baliw ampt HAHAHA.",
+"Sure oi.",
+"Gusto kita jimar matagal na.",
+            "Ganda ko daw eh\n HAHAHHA."
+        ];
+
+        function generateMessage() {
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById("message").innerText = messages[randomIndex];
+        }
+    </script>
+    <p><center>@Created by your Crush!!</center></p>
+
+</body>
+</html>
